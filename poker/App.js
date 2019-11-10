@@ -8,4 +8,6 @@ const App = (props) => {
 
 // CHALLENGE: Write a separate Card component for use in the App component
 // TIP: Use props to pass the suit and number to each Card component
-const Card = null;  
+const Card = (props) => {
+    console.log(props)
+};  
