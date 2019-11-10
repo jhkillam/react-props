@@ -1,5 +1,18 @@
 // Render the circles using React!
+
+const App = (props) => {
+    let { circles } = props;
+    const AllCircles = props.circles.map(Circle)
+    console.log(AllCircles)
+    return (
+        <span>
+            {AllCircles}
+        </span>
+    )
+}
+
 const Circle = (props) => {
+    console.log('circle component props:', props)
     const style = {
         width: (props.radius * 2) + 'px', 
         height: (props.radius * 2) + 'px', 
@@ -8,17 +21,5 @@ const Circle = (props) => {
     }
     return (
         <div style={style}></div>
-    )
-}
-
-const App = (props) => {
-    let { circles } = props;
-    const AllCircles = props.circles.map(Circle)
-    console.log(AllCircles)
-
-    return (
-        <span>
-            {AllCircles}
-        </span>
     )
 }
