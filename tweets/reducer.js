@@ -40,18 +40,12 @@ const initialState = [
 
 const reducer = (state = initialState, action) => {
     // Handle actions here - make sure you don't mutate the state!
-    const { type } = action;
 
-    const reducer = (state = initialState, action) => {
-        // Handle actions here - make sure you don't mutate the state!
         const { type, method } = action;
         console.log('reducer method:', method)
         if (type == 'SORT') {
             return [...state].sort((a, b) => b[method] - a[method]);
         }
-
-        return state;
-    }
     
     return state;
 }

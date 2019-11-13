@@ -10,8 +10,8 @@ const App = (props) => {
     )
 }
 
+// CHALLENGE: Write a separate Tweet component for use in the App component
 const Tweet = (props) => {
-    // console.log('Tweet component props:', props)
     let url = props.user.profilePic
     let verifiedCheck = ""
     if (props.user.isVerified) {
@@ -38,14 +38,12 @@ const Tweet = (props) => {
             </div>
         </div>
     )
-};  // CHALLENGE: Write a separate Tweet component for use in the App component
+};  
 
-// const User = (props) => {
-//     return (
-//         <span>{props.user.handle}</span>
-//     )
-// };  
 // CHALLENGE: Write a separate User component for use in the Tweet component
+const User = (props) => {
+
+}
 
 const Metrics = null;  // CHALLENGE: Write a separate Metrics component for use in the Tweet component (likes, retweets, replies)
 
