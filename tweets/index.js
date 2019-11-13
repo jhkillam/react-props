@@ -12,7 +12,6 @@ let buttons = ['sortLikes', 'sortRetweets', 'sortReplies'];
 let type = ['likes', 'retweets', 'replies']
 buttons.forEach((button, i) => {
     document.getElementById(button).addEventListener('click', e => {
-        console.log('clicked btn')
         dispatch({
             type: "SORT",
             method: type[i]
